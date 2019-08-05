@@ -5,7 +5,7 @@ public class DataTypes {
 		char myLetter = 'D';         // Character
 		boolean myBool = true;       // Boolean
 		double myDouble = 22.2;
-		String myText = "Hello";     // String
+		String myText = "Hello";     // String (non-primitive)
 
 		System.out.println(myDouble);
 	}
