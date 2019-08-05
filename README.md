@@ -1,10 +1,18 @@
-# java101
+# Java 101
+A basic tutorial of Java language
 
-## Javanın özellikleri
-- Write Once, Run anywhere (cross platform)
-
+## Features
+- Write Once, Run Anywhere (cross platform)
+- Object Oriented - Everything is Object
+- Architecture-neutral - code executable on many processor systems
 - JIT (just in time) compiler
 ![JIT scheme](https://aboullaite.me/content/images/2017/08/jit.png)
+
+## Compiling
+After installing JDK, we will compile 
+``` javac HelloWorld.java ```
+and run with
+``` java HelloWorld ```
 
 ## Simple Hello World program
 ```
