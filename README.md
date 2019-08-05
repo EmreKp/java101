@@ -145,7 +145,7 @@ if (t > 2) {
 Short way:
 
 ```
-(t > 2) ? System.out.println("t is greater than 2"); : System.out.println("t is less than or equal to 2");
+(t > 2) ? System.out.println("t is greater than 2") : System.out.println("t is less than or equal to 2");
 ```
 
 ### Switch
@@ -260,7 +260,7 @@ When an error occurs, Java will normally stop and generate an error message. The
 try {
     // code block
 } catch (Exception e) {
-    e.printStackTrace();
+    // when exception catched
 }
 ```
 
@@ -292,4 +292,6 @@ public static void main(String[] args) {
     printMethod(3);
     printMethod(null);
 }
-```    
+```
+static means that the method belongs to the class and not an object of the class.
+void means that this method does not have a return value. 
