@@ -20,7 +20,7 @@ public class HelloWorld {
 ## Compiling
 After installing JDK, we will compile and run with these commands:
 
-``` 
+```
 javac HelloWorld.java 
 java HelloWorld 
 ```
@@ -101,13 +101,14 @@ Logical:
 |!|not|reverse result|!(x < 5 && x < 10)|
 
 ## Strings
+Strings must be opened and closed with double quotes.
 ```
 String firstName = "John";
 String lastName = "Doe";
 System.out.println(firstName + " " + lastName);
 ```
 
-We must escape quotes in strings:
+We must escape double quotes in strings:
 ```
 String txt = "We are the so-called "Vikings" from the north.";
 ```
@@ -191,6 +192,11 @@ myArray[1] = 2;
 ...
 ```
 
+Size of array: `myArray.length`
+
+You access an array element by referring to the index number.
+
+
 ## Loops
 ### for loops
 Basic for loop:
@@ -248,6 +254,8 @@ for (int j = 0; j < 10; j++) {
 ```
 
 ## Exceptions
+When an error occurs, Java will normally stop and generate an error message. The technical term for this is: Java will throw an exception (throw an error).
+
 ```
 try {
     // code block
@@ -259,7 +267,7 @@ try {
 Finally example (run if the exception is thrown or not)
 ```
 try {
-    System.out.println(numbers[12]);
+    x = 5 / 0;
 } catch (Exception e) {
     throw e;
 } finally {
@@ -268,4 +276,20 @@ try {
 ```
 
 ## Methods
+See MethodDemo.java for details
 
+```
+static void printMethod() {
+    System.out.println("Called printMethod directly with no arguments");
+}
+
+static void printMethod(Integer n) {
+    System.out.println("The entered value is " + n);
+}
+
+public static void main(String[] args) {
+    printMethod();
+    printMethod(3);
+    printMethod(null);
+}
+```    
