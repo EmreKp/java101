@@ -1,7 +1,10 @@
 # java101
 
 ## Javanın özellikleri
-Burayı doldur
+- Write Once, Run anywhere (cross platform)
+
+- JIT (just in time) compiler
+![JIT scheme](https://aboullaite.me/content/images/2017/08/jit.png)
 
 ## Simple Hello World program
 ```
@@ -13,6 +16,17 @@ public class HelloWorld {
 ```
 
 ## Data Types
+Primitive data types:
+```
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+double myDouble = 20.2;     // Double
+```
+
+Non-primitive data types: Objects and wrappers (Integer, String, Float etc.)
 
 
 ## Decision Making (if-else, switch)
@@ -45,7 +59,6 @@ Short way:
 ```
 
 ### Switch
-See code for more details
 ```
 switch (day) {
     case 1:
@@ -76,7 +89,17 @@ switch (day) {
 ```
 
 ## Arrays
-
+Initialize array:
+```
+int[] myArray = {1, 2, 3, 4, 5};
+```
+or
+```
+int[] myArray = new int[5];
+myArray[0] = 1;
+myArray[1] = 2;
+...
+```
 
 ## Loops
 ### for loops
@@ -97,3 +120,9 @@ for (int number : numbers) {
 ```
 
 ### while, do-while
+```
+
+```
+
+## Classes
+
