@@ -8,6 +8,15 @@ A basic tutorial of Java language
 - JIT (just in time) compiler
 ![JIT scheme](https://aboullaite.me/content/images/2017/08/jit.png)
 
+## Simple Hello World program
+```
+public class HelloWorld {
+    public static void main(String[] args) {
+       System.out.println("Hello world");
+    }
+}
+```
+
 ## Compiling
 After installing JDK, we will compile and run with these commands:
 
@@ -17,15 +26,6 @@ java HelloWorld
 ```
 
 Class name and file name are case-sensitive and must be same.
-
-## Simple Hello World program
-```
-public class HelloWorld {
-    public static void main(String[] args) {
-       System.out.println("Hello world");
-    }
-}
-```
 
 ## Comments
 ```
