@@ -36,16 +36,7 @@ This is multiline comment.
 */
 ```
 
-
-## Identifiers
-- All identifiers should begin with a letter (A to Z or a to z), currency character ($) or an underscore (_).
-- After the first character, identifiers can have any combination of characters.
-- A key word cannot be used as an identifier.
-- Most importantly, identifiers are case sensitive.
-- Examples of legal identifiers: `age`, `$salary`, `_value`, `__1_value`.
-- Examples of illegal identifiers: `123abc`, `-salary`.
-
-## Data Types
+## Variables and Data Types
 Primitive data types:
 ```
 int myNum = 5;               // Integer (whole number)
@@ -57,6 +48,14 @@ double myDouble = 20.2;     // Double
 ```
 
 Non-primitive data types: Objects and wrappers (Integer, String, Float etc.)
+
+## Identifiers
+- All identifiers should begin with a letter (A to Z or a to z), currency character ($) or an underscore (_).
+- After the first character, identifiers can have any combination of characters.
+- A key word cannot be used as an identifier.
+- Most importantly, identifiers are case sensitive.
+- Examples of legal identifiers: `age`, `$salary`, `_value`, `__1_value`.
+- Examples of illegal identifiers: `123abc`, `-salary`.
 
 ## Operators
 Mathematical:
