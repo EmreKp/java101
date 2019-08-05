@@ -100,6 +100,24 @@ Logical:
 |\|\||or|true if one of the statements is true	|x < 5 \|\| x < 4|
 |!|not|reverse result|!(x < 5 && x < 10)|
 
+## Strings
+```
+String firstName = "John";
+String lastName = "Doe";
+System.out.println(firstName + " " + lastName);
+```
+
+We must escape quotes in strings:
+```
+String txt = "We are the so-called "Vikings" from the north.";
+```
+
+Correct way:
+```
+String txt = "We are the so-called \"Vikings\" from the north.";
+```
+
+
 ## Decision Making (if-else, switch)
 ### Basic if-else example
 ```
@@ -248,3 +266,6 @@ try {
     System.out.println("Finally is always printed!");
 }
 ```
+
+## Methods
+
