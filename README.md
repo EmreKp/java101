@@ -197,3 +197,27 @@ do {
 } while (j < 0);
 ```
 
+## break - continue
+break:
+
+```
+for (int i = 0; i < 10; i++) {
+    System.out.println(i);
+
+    if (i == 5) {
+        break;
+    }
+}
+```
+
+continue:
+
+```
+for (int j = 0; j < 10; j++) {
+    if (j <= 2 || j >= 7) {
+        continue;
+    }
+}
+```
+
+## Exceptions
