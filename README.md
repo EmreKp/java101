@@ -27,6 +27,16 @@ public class HelloWorld {
 }
 ```
 
+## Comments
+```
+// This is a single line comment.
+
+/*
+This is multiline comment.
+*/
+```
+
+
 ## Identifiers
 - All identifiers should begin with a letter (A to Z or a to z), currency character ($) or an underscore (_).
 - After the first character, identifiers can have any combination of characters.
