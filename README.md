@@ -9,10 +9,14 @@ A basic tutorial of Java language
 ![JIT scheme](https://aboullaite.me/content/images/2017/08/jit.png)
 
 ## Compiling
-After installing JDK, we will compile 
-``` javac HelloWorld.java ```
-and run with
-``` java HelloWorld ```
+After installing JDK, we will compile and run with these commands:
+
+``` 
+javac HelloWorld.java 
+java HelloWorld 
+```
+
+Class name and file name are case-sensitive and must be same.
 
 ## Simple Hello World program
 ```
@@ -22,6 +26,14 @@ public class HelloWorld {
     }
 }
 ```
+
+## Identifiers
+- All identifiers should begin with a letter (A to Z or a to z), currency character ($) or an underscore (_).
+- After the first character, identifiers can have any combination of characters.
+- A key word cannot be used as an identifier.
+- Most importantly, identifiers are case sensitive.
+- Examples of legal identifiers: `age`, `$salary`, `_value`, `__1_value`.
+- Examples of illegal identifiers: `123abc`, `-salary`.
 
 ## Data Types
 Primitive data types:
@@ -36,17 +48,59 @@ double myDouble = 20.2;     // Double
 
 Non-primitive data types: Objects and wrappers (Integer, String, Float etc.)
 
+## Operators
+Mathematical:
+
+|Operator|Name|Use|Example|
+|------|------|------|------|
+|+|	Addition|Adds together two values|x + y|
+|-|	Subtraction|Subtracts one value from another|x - y|
+|\*| Multiplication|Multiplies two values|x * y|
+|/|	Division|Divides one value from another|x / y|
+|%|	Modulus|Returns the division remainder|x % y|
+|++|Increment|Increases the value of a variable by 1|++x|	
+|--|Decrement|Decreases the value of a variable by 1|--x|
+
+Assignment:
+
+|Operator|Example|Same As|
+|-----|-----|-----|
+|=|x = 5|x = 5|
+|+=|x += 3|x = x + 3|	
+|-=|x -= 3|x = x - 3|
+|\*=|x \*= 3|x = x \* 3|	
+|/=|x /= 3|x = x / 3|
+|%=|x %= 3|x = x % 3|
+
+Comparison:
+
+|Operator|Name|Example|
+|-----|-----|-----|
+|==|Equal to|x == y|
+|!=|Not equal|x != y|
+|>|Greater than|x > y|
+|<|Less than|x < y|
+|>=|Greater than or equal to|x >= y|
+|<=|Less than or equal to|x <= y|
+
+Logical:
+
+|Operator|Name|Description|Example|
+|-----|-----|-----|-----|
+&&|and|true if both statements are true|x < 5 &&  x < 10|
+|\|\||or|true if one of the statements is true	|x < 5 \|\| x < 4|
+|!|not|reverse result|!(x < 5 && x < 10)|
 
 ## Decision Making (if-else, switch)
 ### Basic if-else example
 ```
 int x = 2;
 if (x > 10) {
-    System.out.println("x 10'dan büyük");
+    System.out.println("x is greater than 10");
 } else if (x >= 5 && x <= 10) {
-    System.out.println("x 5 ile 10 arasında");
+    System.out.println("x is between 5 and 10 inclusive");
 } else {
-    System.out.println("x 5'ten küçük");
+    System.out.println("x is less than 5");
 }
 ```
 ### Shorthand if-else
@@ -68,6 +122,7 @@ Short way:
 
 ### Switch
 ```
+int day = 4;
 switch (day) {
     case 1:
         weekOfDay = "Monday";
@@ -131,6 +186,3 @@ for (int number : numbers) {
 ```
 
 ```
-
-## Classes
-
