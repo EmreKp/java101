@@ -197,7 +197,7 @@ do {
 } while (j < 0);
 ```
 
-## break - continue
+### break - continue
 break:
 
 ```
@@ -221,3 +221,21 @@ for (int j = 0; j < 10; j++) {
 ```
 
 ## Exceptions
+```
+try {
+    // code block
+} catch (Exception e) {
+    e.printStackTrace();
+}
+```
+
+Finally example (run if the exception is thrown or not)
+```
+try {
+    System.out.println(numbers[12]);
+} catch (Exception e) {
+    throw e;
+} finally {
+    System.out.println("Finally is always printed!");
+}
+```
