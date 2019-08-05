@@ -175,7 +175,6 @@ switch (day) {
         break;
     default:
         System.out.println("Day is not between 1 and 7");
-        break;
 }
 ```
 
