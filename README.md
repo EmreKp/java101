@@ -444,6 +444,140 @@ Non-access level modifiers:
 |abstract|Can only be used in an abstract class, and can only be used on methods|methods|
 
 
-### Methods
+### Encapsulation
 
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:
+- declare class variables/attributes as private (only accessible within the same class)
+- provide public setter and getter methods to access and update the value of a private variable
+
+Example: (also see GetSetPerson.java)
+Person.java
+```
+public class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+	    this.name = name;
+    }
+
+	public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+```
+
+Why Encapsulation?
+- Better control of class attributes and methods
+- Class variables can be made read-only (if you omit the set method), or write-only (if you omit the get method)
+- Flexible: the programmer can change one part of the code without affecting other parts
+- Increased security of data
+
+### Inheritance
+
+There are two class types for inheritance:
+- subclass (child) - the class that inherits from another class
+- superclass (parent) - the class being inherited from
+
+We use `extends` keyword for inheriting.
+
+Example:
+
+```
+class Vehicle {
+  protected String brand = "Ford";  
+  
+  public void honk() {       
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";
+  public static void main(String[] args) {
+    Car myCar = new Car();
+    myCar.honk();
+
+    System.out.println(myCar.brand + " " + myCar.modelName); 
+  }
+}
+```
+
+It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+
+### Polymorphism
+Polymorphism overrides parent class methods to perform different tasks. This allows us to perform a single action in different ways.
+
+```
+class Animal {
+  public void animalSound() {
+    System.out.println("Ses yap");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("Hav hav");
+  }
+}
+```
+
+## Abstraction
+
+### Abstract classes
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces.
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class). It cannot be instantiated.
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+
+### Interface
+An interface is a completely "abstract class" that is used to group related methods with empty bodies:
+
+```
+interface Animal {
+  public void animalSound();
+  public void run(); // 
+}
+```
+
+We use `implements` keyword for implementing interfaces.
+
+Class can implement multiple interfaces:
+```
+interface FirstInterface {
+  public void myMethod(); // interface method
+}
+
+interface SecondInterface {
+  public void myOtherMethod(); // interface method
+}
+
+// DemoClass "implements" FirstInterface and SecondInterface
+class DemoClass implements FirstInterface, SecondInterface {
+  public void myMethod() {
+    System.out.println("Some text..");
+  }
+  public void myOtherMethod() {
+    System.out.println("Some other text...");
+  }
+}
+```
+
+- Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+- Interface methods do not have a body - the body is provided by the "implement" class
+- On implementation of an interface, you must override all of its methods
+- Interface methods are by default abstract and public
+- Interface attributes are by default public, static and final
+- An interface cannot contain a constructor (as it cannot be used to create objects)
+
+## Enums
 
