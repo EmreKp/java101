@@ -295,17 +295,21 @@ public static void main(String[] args) {
 static means that the method belongs to the class and not an object of the class.
 void means that this method does not have a return value. 
 
-## Classes
+## Classes/Objects
 Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
 In Java, an object is created from a class. Example:
 ```
-public static void main(String[] args) {
+public class MyClass {
+  int x = 5;
+
+  public static void main(String[] args) {
     MyClass myObj = new MyClass();
     System.out.println(myObj.x);
   }
+}
 ```
 
-Multiple classes:
+Multiple classes (compile one file and it generates two classes) :
 
 MyClass.java
 
@@ -315,17 +319,114 @@ public class MyClass {
 }
 ```
 
-OtherClass.java
+YourClass.java
 
 ```
-public class OtherClass {
+public class YourClass {
   public static void main(String[] args) {
     MyClass myObj = new MyClass();
     System.out.println(myObj.x);
   }
 }
 ```
+
+### Attributes
+
+We can access and modify attributes (fields) by `.` sign unless it is not declared final. 
+
+```
+public class MyClass {
+  int x = 5;
+
+  public static void main(String[] args) {
+    MyClass myObj = new MyClass();
+    System.out.println(myObj.x);
+    myObj.x = 10;
+    System.out.println(myObj.x);
+  }
+}
+```
+### Methods
+
+We can declare methods as static or public. Public methods require that instantiating a new object, while static does not.
+
+Static method example:
+
+```
+public class MyClass {
+  static void myMethod() {
+    System.out.println("Hello World!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+```
+
+Public method example:
+
+```
+public class Car {
+  public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+
+  public static void main(String[] args) {
+    Car myCar = new Car();
+    myCar.fullThrottle(); 
+    myCar.speed(200);  
+  }
+}
+```
+
+We can compile and run them also in separate classes.
+
+### Constructor
+
+```
+public class MyClass {
+  int x;  
+  
+  public MyClass() {
+    x = 5;
+  }
+
+  public static void main(String[] args) {
+    MyClass myObj = new MyClass(); 
+    System.out.println(myObj.x);
+  }
+}
+```
+Note that the constructor name must match the class name, and it cannot have a return type (like void).
+Also note that the constructor is called when the object is created. All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. However, then you are not able to set initial values for object attributes.
+
+Example with many parameters:
+
+```
+public class Car {
+  int modelYear;
+  String modelName;
+
+  public Car(int year, String name) {
+    modelYear = year;
+    modelName = name;
+  }
+
+  public static void main(String[] args) {
+    Car myCar = new Car(1969, "Mustang");
+    System.out.println(myCar.modelYear + " " + myCar.modelName);
+  }
+}
+```
+
 ### Modifiers
+
+Access level modifiers:
 
 |Modifier|Description|Uses|
 |-----|-----|-----|
@@ -334,11 +435,15 @@ public class OtherClass {
 |protected|The code is accessible in the same package and subclasses|methods, attributes, constructors|
 |default|The code is only accessible in the same package|classes, methods, attributes, constructors|
 
-### Attributes
+Non-access level modifiers:
+
+|Modifier|Description|Uses|
+|-----|-----|-----|
+|final|Attributes and methods cannot be overridden/modified and class cannot be inherited|classes, methods, attributes|
+|static|Attributes and methods belongs to the class, rather than an object|methods, attributes|
+|abstract|Can only be used in an abstract class, and can only be used on methods|methods|
 
 
 ### Methods
-### Constructor
-örneği koy
-Note that the constructor name must match the class name, and it cannot have a return type (like void).
-Also note that the constructor is called when the object is created.
+
+
