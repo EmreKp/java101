@@ -294,3 +294,50 @@ public static void main(String[] args) {
 ```
 static means that the method belongs to the class and not an object of the class.
 void means that this method does not have a return value. 
+
+## Classes
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+In Java, an object is created from a class. Example:
+```
+public static void main(String[] args) {
+    MyClass myObj = new MyClass();
+    System.out.println(myObj.x);
+  }
+```
+
+Multiple classes:
+
+MyClass.java
+
+```
+public class MyClass {
+  int x = 5;
+}
+```
+
+OtherClass.java
+
+```
+public class OtherClass {
+  public static void main(String[] args) {
+    MyClass myObj = new MyClass();
+    System.out.println(myObj.x);
+  }
+}
+```
+### Modifiers
+
+|Modifier|Description|Uses|
+|-----|-----|-----|
+|public|The class is accessible by any other class|classes, methods, attributes, constructors|
+|private|The code is only accessible within the declared class|methods, attributes, constructors|
+|protected|The code is accessible in the same package and subclasses|methods, attributes, constructors|
+|default|The code is only accessible in the same package|classes, methods, attributes, constructors|
+
+### Attributes
+
+### Methods
+### Constructor
+örneği koy
+Note that the constructor name must match the class name, and it cannot have a return type (like void).
+Also note that the constructor is called when the object is created.
