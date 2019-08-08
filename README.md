@@ -716,13 +716,26 @@ Getting an item:  `countries.get("Turkey")`
 
 Removing item: `countries.remove("Germany")`
 
-Setting an item: `countries.set("Turkey", "Istanbul")`
+Setting an item: `countries.put("Turkey", "Istanbul")`
 
 Removing entire map: `countries.clear()`
 
-Size of array: `cars.size()`
+Size of map: `cars.size()`
 
 ### Stream API (Java 8)
 
 ## Dates
+Java has deprecated Date class in the past, but now we need to import the java.time package (Java 8) to work with the date and time API. The package includes many date and time classes.
 
+|Class|Description|
+|-----|-----|
+|LocalDate|Represents a date (year, month, day (yyyy-MM-dd))|
+|LocalTime|Represents a time (hour, minute, second and milliseconds (HH-mm-ss-zzz))|
+|LocalDateTime|Represents both a date and a time (yyyy-MM-dd-HH-mm-ss.zzz)|
+|DateTimeFormatter|Formatter for displaying and parsing date-time objects|
+
+You can use the DateTimeFormatter class with the ofPattern() method in the same package to format or parse date-time objects.
+
+```
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"); 
+```
