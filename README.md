@@ -545,7 +545,7 @@ An interface is a completely "abstract class" that is used to group related meth
 ```
 interface Animal {
   public void animalSound();
-  public void run(); // 
+  public void run();
 }
 ```
 
@@ -610,4 +610,119 @@ public class MyClass {
 An enum can, just like a class, have attributes and methods. The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden).
 
 ## Packages
-A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. 
+A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. There are two types of packages:
+- Built-in Packages (packages from the Java API)
+- User-defined (or 3rd party) Packages (create your own packages)
+
+The Java API is a library of prewritten classes, that are free to use, included in the Java Development Environment.
+We should use `import` for using packages.
+
+```
+import package.name.Class; // Import a single class 
+import package.name.*; // Import the whole package
+```
+
+Example: 
+
+```
+import java.util.Scanner;
+
+class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter username");
+
+    String userName = myObj.nextLine(); 
+    System.out.println("Username is: " + userName); 
+  }
+}
+```
+For importing all classes in a package, we can use asterisk(`\*`)
+
+### User-defined Packages
+To create your own package, you need to understand that Java use a file system directory to store them. Just like folders on your computer. We use `package` keyword for them. 
+
+```
+package mypack;
+
+class MyPackageClass { 
+  public static void main(String[] args) { 
+    System.out.println("This is my package!"); 
+  } 
+}
+```
+Compile the class, and then package:
+```
+javac MyPackageClass.java -> compile class
+javac -d . MyPackageClass.java -> force compile package
+```
+## Wrappers
+It converts primitive type to Objects. Since they are objects, they have methods and can be null as opposite of primitive types.
+
+|Primitive Data Type|Wrapper Class|
+|-----|-----|
+|byte|Byte|
+|short|Short|
+|int|Integer|
+|long|Long|
+|float|Float|
+|double|Double|
+|boolean|Boolean|
+|char|Character|
+
+
+## Collections
+### ArrayList
+The ArrayList class is a resizable array, which can be found in the java.util package.
+
+The difference between a built-in array and an ArrayList in Java, is that the size of an array is immutable (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. It cannot be declared with primitive types (for example, we need `Integer` instead of `int`).
+
+Basic syntax:
+```
+import java.util.ArrayList; // import the ArrayList class
+
+ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
+```
+
+Adding items:  `cars.add("Volvo")`
+
+Getting an item (zero-based index):  `cars.get(0)` gives first element of list.
+
+Removing item: `cars.remove(0)`
+
+Setting an item: `cars.set(0, "Opel")`
+
+Removing entire list: `cars.clear()`
+
+Size of list: `cars.size()`
+
+Sorting (needs java.util.Collections): `Collections.sort(cars)`
+
+### HashMap
+Arrays store items as an ordered collection, and you have to access them with an index number. A HashMap however, store items in "key/value" pairs, and you can access them by an index of another type (e.g. a String).
+
+One object is used as a key (index) to another object (value). It can store different types: String keys and Integer values, or the same type, like: String keys and String values.
+
+Basic syntax:
+```
+import java.util.HashMap; // import the HashMap class
+
+HashMap<String, String> countries = new HashMap<String, String>();
+```
+
+Adding items:  `countries.put("Turkey", "Ankara")`
+
+Getting an item:  `countries.get("Turkey")`
+
+Removing item: `countries.remove("Germany")`
+
+Setting an item: `countries.set("Turkey", "Istanbul")`
+
+Removing entire map: `countries.clear()`
+
+Size of array: `cars.size()`
+
+### Stream API (Java 8)
+
+## Dates
+
