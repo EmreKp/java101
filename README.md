@@ -723,6 +723,7 @@ Removing entire map: `countries.clear()`
 Size of map: `cars.size()`
 
 ### Stream API (Java 8)
+See https://www.mkyong.com/java8/java-8-streams-filter-examples/
 
 ## Dates
 Java has deprecated Date class in the past, but now we need to import the java.time package (Java 8) to work with the date and time API. The package includes many date and time classes.
